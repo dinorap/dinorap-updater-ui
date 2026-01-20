@@ -1,0 +1,13 @@
+{
+    "name": "dinorap-updater-ui",
+    "version": "1.0.0",
+    "description": "Vue 3 Component for OTA Update Button",
+    "main": "index.js",
+    "files": [
+        "index.js",
+        "src"
+    ],
+    "peerDependencies": {
+        "vue": "^3.0.0"
+    }
+}
