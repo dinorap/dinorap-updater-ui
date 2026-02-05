@@ -9,7 +9,7 @@
     <span v-if="isUpdating" class="spinner">⏳</span>
 
     <span v-if="isUpdating"> Đang tải... App sẽ tự khởi động lại</span>
-    <span v-else>⬇️ Cập nhật v{{ newVersion }}</span>
+    <span v-else>⬇️ Cập nhật {{ newVersion }}</span>
   </button>
 </template>
 
