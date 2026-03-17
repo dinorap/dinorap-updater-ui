@@ -39,7 +39,6 @@ const checkUpdate = async () => {
   try {
     // Gọi API: http://localhost:8000/api/update/check
     const url = `${props.apiBase}${props.apiPrefix}/check`;
-    console.log("[UpdaterUI] Checking:", url);
 
     const res = await fetch(url);
     const data = await res.json();
@@ -47,13 +46,12 @@ const checkUpdate = async () => {
     if (data.has_update) {
       hasUpdate.value = true;
       newVersion.value = data.version;
-      console.log("[UpdaterUI] Found update:", data.version);
     }
   } catch (e) {
     // Lỗi thì im lặng, không làm phiền user, chỉ log console dev xem
     console.warn(
       "[UpdaterUI] Check update failed (Backend might be offline):",
-      e
+      e,
     );
   }
 };
@@ -61,7 +59,7 @@ const checkUpdate = async () => {
 const handleUpdate = async () => {
   if (
     !confirm(
-      `Sếp có chắc chắn muốn cập nhật lên bản ${newVersion.value} không?\n\nỨng dụng sẽ tự động tắt và khởi động lại.`
+      `Sếp có chắc chắn muốn cập nhật lên bản ${newVersion.value} không?\n\nỨng dụng sẽ tự động tắt và khởi động lại.`,
     )
   ) {
     return;
