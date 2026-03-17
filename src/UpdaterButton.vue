@@ -51,7 +51,10 @@ const checkUpdate = async () => {
     }
   } catch (e) {
     // Lỗi thì im lặng, không làm phiền user, chỉ log console dev xem
-    console.warn("[UpdaterUI] Check update failed (Backend might be offline):", e);
+    console.warn(
+      "[UpdaterUI] Check update failed (Backend might be offline):",
+      e
+    );
   }
 };
 
